@@ -1,0 +1,208 @@
+.reviews-wrapper {
+  position: relative;
+  max-width: 900px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  overflow: hidden;
+  margin: 70px auto 20px;
+  border-radius: 20px;
+  padding: 50px 20px 20px 50px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  .reviews-slogan {
+    color: #D93146;
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0;
+  }
+  .reviews-title {
+    width: 70%;
+    margin: 10px 0;
+    font-size: 2.6em;
+    font-weight: 900;
+    line-height: 50px;
+  }
+  .reviews-btn {
+    margin: 20px 0;
+    border-radius: 9px;
+    background-color: #FAE5E8;
+    color: #DA394D;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border-style: none;
+    outline-style: none;
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: #D93146;
+      transition: all 300ms ease;
+    }
+  }
+  .btn-arrows {
+    width: 84px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+     .btn-arrow {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-style: none;
+      border-radius: 50px;
+      font-weight: 900;
+      background-color: #FAE5E8;
+      color: #DA394D;
+      outline-style: none;
+      &:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #D93146;
+        transition: all 300ms ease;
+      }
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+  .header-logo {
+    position: absolute;
+    top: -118px;
+    right: 20px;
+    color: rgba(141, 153, 153,.4);
+     div:nth-child(1) {
+      font-size: 12em;
+      font-weight: 900;
+      &::after {
+        content: "2";
+        color: rgba(255, 169, 181,.4);
+        font-size: 0.4em;
+        position: relative;
+        bottom: -4px;
+        left: -24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .reviews-wrapper {
+    position: relative;
+    max-width: 900px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    overflow: hidden;
+    margin: 70px auto 20px;
+    border-radius: 20px;
+    padding: 50px 20px 20px 50px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    .reviews-slogan {
+      color: #D93146;
+      font-size: 1.5em;
+      font-style: italic;
+      margin: 0;
+    }
+    .reviews-title {
+      width: 70%;
+      margin: 10px 0;
+      font-size: 2.9em;
+      font-weight: 900;
+      line-height: 50px;
+    }
+    .reviews-btn {
+      font-size: 1.4em;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .reviews-wrapper {
+    .header-logo {
+      display: none;
+    }
+    .reviews-btn {
+      font-size: 1.1em;
+      margin: 36px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .reviews-wrapper {
+    .header-logo {
+      display: none;
+    }
+    .reviews-slogan {
+      font-size: 1.2em;
+    }
+    .reviews-title {
+      font-size: 2.4em;
+      width: 85vw;
+    }
+    .reviews-btn {
+      font-size: 0.7em;
+      margin: 36px 0;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .reviews-wrapper {
+    .header-logo {
+      display: none;
+    }
+    .reviews-slogan {
+      font-size: 1.1em;
+    }
+    .reviews-title {
+      font-size: 2em;
+      width: 80vw;
+    }
+    .reviews-btn {
+      font-size: 0.7em;
+      margin: 36px 0;
+    }
+    .btn-arrows {
+      width: auto;
+      .btn-arrow {
+        width: 40px;
+        height:40px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+@media (orientation: landscape) and  (max-width: 975px) {
+  .reviews-wrapper {
+    .reviews-slogan {
+      font-size: 1em;
+    }
+    .reviews-title {
+      font-size: 1.8em;
+      width: 85vw;
+    }
+    .reviews-btn {
+      font-size: 0.7em;
+    }
+  }
+}
+@media (orientation: landscape) and  (max-width: 975px) {
+  .reviews-wrapper {
+    .reviews-slogan {
+      font-size: 1em;
+    }
+    .reviews-title {
+      font-size: 2.4em;
+    }
+  }
+}

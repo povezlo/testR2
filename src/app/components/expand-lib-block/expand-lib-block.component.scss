@@ -1,0 +1,128 @@
+.expand-wrapper {
+  max-width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  font-family: sans-serif;
+  border-radius: 20px;
+  background-color: #0E1E31;
+
+  h1 {
+    width: 320px;
+    font-weight: 700;
+    font-size: 2.6em;
+    color: #50E3C2;
+  }
+
+  .right-info-block {
+    width: 400px;
+    p {
+      color: #ffffff;
+    }
+    .expand-button {
+      margin: 20px 0;
+      border-radius: 9px;
+      background-color: #14313F;
+      color: #38bba1;
+      font-weight: bold;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-style: none;
+      outline-style: none;
+      &:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #38bba1;
+        transition: all 300ms ease;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .expand-wrapper {
+    margin: 20px;
+    padding: 40px 20px;
+    height: auto;
+    h1 {
+      width: 250px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .right-info-block{
+      .expand-button {
+        font-size: 1.4em;
+      }
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .expand-wrapper {
+    flex-direction: column;
+    width: auto;
+    padding: 40px;
+    height: auto;
+    margin: 0;
+    h1 {
+      width: auto;
+      font-size: 2em;
+    }
+
+    .right-info-block {
+      width: auto;
+      p {
+        color: #ffffff;
+        margin: 20px auto;
+        font-size: 1.2em;
+      }
+      .expand-button {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .expand-wrapper {
+    margin: 0;
+    h1 {
+      font-size: 1.8em;
+    }
+
+    .right-info-block {
+      width: auto;
+      .expand-button {
+        font-size: 0.7em;
+      }
+
+      p {
+        color: #ffffff;
+        margin: 20px auto;
+        font-size: .9em;
+      }
+    }
+  }
+}
+@media (orientation: landscape) and  (max-width: 975px) {
+  .expand-wrapper {
+    h1 {
+      width: auto;
+      font-size: 1.5em;
+      padding: 40px;
+    }
+    .right-info-block {
+      width: auto;
+      p {
+        font-size: 1em;
+      }
+      .expand-button {
+        font-size: 0.7em;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div *ngIf="books.length">
+  <div class="visible-block">
+    <div class="carusel" #carousel>
+      <div *ngFor="let book of books">
+        <div class="item">
+          <img src="{{book.img}}" alt="{{book.title}}">
+          <p>{{book.title}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<button class="btn-arrow btn-arrow-left" #firstItem (click)="prev()">
+  <span class="material-icons arrows">chevron_left</span>
+</button>
+<button class="btn-arrow btn-arrow-right" #lastItem (click)="next()">
+  <span class="material-icons arrows">chevron_right</span>
+</button>

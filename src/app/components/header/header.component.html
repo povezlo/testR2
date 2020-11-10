@@ -1,0 +1,31 @@
+<header>
+  <div class="header-wrapper">
+    <div *ngIf="searchActive; else searchPassive">
+      <div class="search-group">
+        <input type="text" class="form-control" placeholder="Enter text to search" autofocus>
+        <span class="material-icons search-cancel-block" (click)="searchActive = false">cancel</span>
+      </div>
+    </div>
+    <ng-template #searchPassive>
+        <button class="dropbtn" (click)="openMenu()">
+          <span class="material-icons">menu</span>
+        </button>
+        <div class="header-logo">
+          <div>R</div>
+          <div>digital library</div>
+        </div>
+        <ul class="header-menu-list" #menuList>
+          <li>Browse</li>
+          <li>A-Z Index</li>
+          <li>About</li>
+          <li>FAQs</li>
+          <li>User Guide</li>
+          <li #quit class="menu-list-quit" (click)="closeMenu()">Quit</li>
+        </ul>
+      <div class="header-nav-block">
+        <span #search  class="material-icons search-block" (click)="searchOpen()">search</span>
+        <span class="material-icons account-block">account_circle</span>
+      </div>
+    </ng-template>
+  </div>
+</header>

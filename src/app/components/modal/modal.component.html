@@ -1,0 +1,27 @@
+<div class="modal-window">
+  <div class="overlay">
+    <div class="note" *ngFor="let note of notesArr.noteList; let i = index">
+      <img src="https://st.depositphotos.com/1075946/4133/i/450/depositphotos_41333565-stock-photo-woman-in-stylish-glasses.jpg" class="note-image" alt="">
+      <div class="comments">
+        <div class="note-title">
+          <h4>{{title}}</h4>
+          <h4>{{note.date | date: 'h:mm'}}</h4>
+        </div>
+        <p class="note-text">
+          {{note.comments}}
+        </p>
+        <button class="resolve-btn" (click)="remove.emit([notesArr, i])">Resolve</button>
+      </div>
+
+    </div>
+  </div>
+
+    <form class="add-comment" [formGroup]="form" novalidate>
+      <label>
+        <input type="text" formControlName="note" placeholder="Add comment...">
+      </label>
+      <div *ngIf="form.controls.note.value">
+        <button type="button"  class="send-btn" (click)="onSubmit()">Send</button>
+      </div>
+    </form>
+</div>

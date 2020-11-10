@@ -1,0 +1,352 @@
+.modal-window {
+  position: absolute;
+  width: 230px;
+  height: auto;
+  top: 50px;
+  left: 0;
+  z-index: 2000;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+  :hover {
+    cursor: auto;
+  }
+}
+.overlay {
+  max-height: 445px;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+.note {
+  width: inherit;
+  min-height: 80px;
+  display: flex;
+  font-size: 12px;
+  padding: 5px;
+  box-sizing: border-box;
+  .note-image {
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    border-radius: 50px;
+    margin-right: 10px;
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 230px;
+    height: auto;
+    .note-title {
+      width: 100%;
+     display: flex;
+     justify-content: space-between;
+      color: #181819;
+    }
+    .note-text {
+     color: darkgray;
+     margin: 5px 0;
+    }
+    .resolve-btn {
+      font-size: 12px;
+      font-weight: 600;
+      color: #cf3333;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      outline-style: none;
+      border-style: none;
+      background: white;
+      &:hover {
+        cursor: pointer;
+        transition: all 400ms ease;
+        color: red;
+      }
+    }
+  }
+}
+
+  .add-comment {
+    position: relative;
+    width: inherit;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    input {
+      font-size: 12px;
+      width: 230px;
+      height: 30px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: #F4F5F7;
+      border-style: none;
+      outline-style: none;
+    }
+    .send-btn {
+      width: 50px;
+      height: 30px;
+      font-size: 12px;
+      color: #cf3333;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 10px;
+      box-sizing: border-box;
+      outline-style: none;
+      border-style: none;
+      position: absolute;
+      top: 0;
+      right: 5px;
+      background-color: #F4F5F7;
+      &:hover {
+        cursor: pointer;
+        transition: all 400ms ease;
+        color: red;
+      }
+    }
+  }
+@media only screen and (max-width: 1024px) {
+  .modal-window {
+    width: 60vw;
+    height: auto;
+    top: 50px;
+    left: 0;
+    padding: 1vw;
+    :hover {
+      cursor: auto;
+    }
+  }
+  .overlay {
+    max-height: 60vw;
+    margin-bottom: 1vw;
+  }
+  .note {
+    min-height: 20vw;
+    font-size: 1em;
+    padding: 3vw;
+    .note-image {
+      width: 8vw;
+      height: 8vw;
+      margin-right: 1vw;
+    }
+    .comments {
+      width: 60vw;
+      height: auto;
+      .note-title {
+        width: 100%;
+      }
+      .note-text {
+        margin: 1vw 0;
+      }
+      .resolve-btn {
+        font-size: 1em;
+        font-weight: 600;
+        &:hover {
+        }
+      }
+    }
+  }
+
+  .add-comment {
+    input {
+      position: relative;
+      font-size: 1.1em;
+      width: 60vw;
+      height: 5vw;
+      padding: 31px 30px;
+    }
+    .send-btn {
+      position: absolute;
+      width: 20vh;
+      height: 5vh;
+      font-size: 1.2em;
+      top: 0;
+      right: 5px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal-window {
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    padding: 1vw;
+    :hover {
+      cursor: auto;
+    }
+  }
+  .overlay {
+    max-height: 60vw;
+    margin-bottom: 1vw;
+  }
+  .note {
+    min-height: 20vw;
+    font-size: 1em;
+    padding: 3vw;
+    .note-image {
+      width: 8vw;
+      height: 8vw;
+      margin-right: 1vw;
+    }
+    .comments {
+      width: 100vw;
+      height: auto;
+      .note-title {
+        width: 100%;
+      }
+      .note-text {
+        margin: 1vw 0;
+      }
+      .resolve-btn {
+        font-size: 1em;
+        font-weight: 600;
+        &:hover {
+        }
+      }
+    }
+  }
+
+  .add-comment {
+    input {
+      position: relative;
+      font-size: 1.1em;
+      width: 98vw;
+      height: 5vw;
+      padding: 31px 30px;
+    }
+    .send-btn {
+      position: absolute;
+      width: 20vh;
+      height: 10vh;
+      font-size: 1.2em;
+      top: 0;
+      right: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+}
+@media (orientation: landscape) and  (max-width: 1024px) {
+  .modal-window {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1vw;
+    .overlay {
+      max-height: 30vw;
+      margin-bottom: 1vw;
+    }
+    .note {
+      min-height: 20vw;
+      font-size: 0.8em;
+      padding: 3vw;
+      .note-image {
+        width: 5vw;
+        height: 5vw;
+        margin-right: 1vw;
+      }
+      .comments {
+        width: 100vw;
+        height: auto;
+        .note-title {
+          width: 100%;
+        }
+        .note-text {
+          margin: 1vw 0;
+        }
+        .resolve-btn {
+          font-size: 0.8em;
+          font-weight: 600;
+          &:hover {
+          }
+        }
+      }
+    }
+
+    .add-comment {
+      input {
+        position: relative;
+        font-size: 0.8em;
+        width: 98vw;
+        height: 5vw;
+        padding: 31px 30px;
+      }
+      .send-btn {
+        position: absolute;
+        width: 20vh;
+        height: 10vh;
+        font-size: 0.8em;
+        top: 14px;
+        right: 15px;
+      }
+    }
+  }
+}
+@media (orientation: landscape) and  (max-width: 768px) {
+  .modal-window {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1vw;
+  }
+  .overlay {
+    max-height: 20vw;
+    margin-bottom: 1vw;
+  }
+  .note {
+    min-height: 20vw;
+    font-size: 0.8em;
+    padding: 3vw;
+    .note-image {
+      width: 5vw;
+      height: 5vw;
+      margin-right: 1vw;
+    }
+    .comments {
+      width: 100vw;
+      height: auto;
+      .note-title {
+        width: 100%;
+      }
+      .note-text {
+        margin: 1vw 0;
+      }
+      .resolve-btn {
+        font-size: 0.8em;
+        font-weight: 600;
+        &:hover {
+        }
+      }
+    }
+  }
+
+  .add-comment {
+    input {
+      position: relative;
+      font-size: 0.8em;
+      width: 98vw;
+      height: 5vw;
+      padding: 31px 30px;
+    }
+    .send-btn {
+      position: absolute;
+      width: 20vh;
+      height: 17vh;
+      font-size: 0.8em;
+      top: 0;
+      right: 15px;
+    }
+  }
+}
