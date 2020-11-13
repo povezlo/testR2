@@ -14,7 +14,7 @@ import {Notes} from '../interface';
 @Directive({
   selector: '[appNotes]'
 })
-export class AppNotesDirective implements AfterViewInit{
+export class AppNotesDirective implements AfterViewInit, OnInit{
   openedModal = false;
   allNotes: Notes[] = [];
   modalComponent: any;
@@ -27,9 +27,17 @@ export class AppNotesDirective implements AfterViewInit{
     private r: Renderer2,
     private fb: FbService) {
   }
+  
+  ngOnInit(): void {
+    this.UnselectedElem = {
+      activeModal: false,
+      innerEl: '',
+      currentElem: null
+    };
+  }
+
   ngAfterViewInit(): void {
     this.fb.getNotes().subscribe(res => {
-      this.UnselectedElem = {activeModal: false, innerEl: '', currentElem: null};
       if (res) {
         this.allNotes = res;
         res.forEach(note => {
