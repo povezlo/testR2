@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   ComponentFactoryResolver,
   Directive,
+  OnInit,
   ElementRef,
   HostListener,
   Renderer2,
